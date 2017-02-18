@@ -1,0 +1,26 @@
+.reply_content {
+    position: relative;
+}
+
+.reply_content .reply_box {
+    display: none;
+    width: 280px;
+    height: auto;
+    position: absolute;
+    top: -30px;
+    right: -320px;
+    background-color: rgb(232, 232, 232);
+    color: #000;
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 2px solid #222;
+}
+
+.reply_content .reply_box li {
+    list-style: none;
+}
+
+.reply_content .reply_box li:not(:last-child) {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 8px;
+}

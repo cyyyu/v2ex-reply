@@ -1,0 +1,27 @@
+{
+  "name": "v2ex-reply",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Extension of v2ex.com",
+  "homepage_url": "https://github.com/cyyyu/v2ex-reply",
+  "author": "cyyyu",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.v2ex.com/",
+    "*://v2ex.com/"
+  ],
+  "content_scripts": [{
+    "all_frames": true,
+    "matches": [
+      "*://*.v2ex.com/*",
+      "*://v2ex.com/*"
+    ],
+    "css": [
+      "stylesheets/main.css"
+    ],
+    "js": [
+      "javascripts/main.js"
+    ]
+  }]
+}
