@@ -1,26 +1,16 @@
 .reply_content {
-    position: relative;
+  position: relative;
 }
 
 .reply_content .reply_box {
-    display: none;
-    width: 280px;
-    height: auto;
-    position: absolute;
-    top: -30px;
-    right: -320px;
-    background-color: rgb(232, 232, 232);
-    color: #000;
-    border-radius: 8px;
-    padding: 8px 12px;
-    border: 2px solid #222;
+  width: 100%;
+  height: auto;
+  background-color: cornsilk;
+  padding: 3px 12px;
+  box-sizing: border-box;
 }
 
-.reply_content .reply_box li {
-    list-style: none;
-}
-
-.reply_content .reply_box li:not(:last-child) {
-    border-bottom: 1px solid #fff;
-    padding-bottom: 8px;
+.reply_content .reply_box p {
+  margin: 0 0;
+  color: dimgray;
 }
