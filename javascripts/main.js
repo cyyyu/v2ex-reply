@@ -58,9 +58,7 @@ let setBoxHtml = (dom, users, level) => {
   map(users, (user) => {
     let contents = getUserContents(user, level)
     map(contents, (content) => {
-      html += li.replace(/\{\{replace\}\}/g, `
-                ${user}: ${content}
-            `)
+      html += li.replace(/\{\{replace\}\}/g, `${user}: ${content}`)
     })
   })
   dom.innerHTML = html
