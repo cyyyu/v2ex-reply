@@ -61,10 +61,12 @@ let setBoxHtml = (dom, users, level) => {
       html += li.replace(/\{\{replace\}\}/g, `${user}: ${content}`)
     })
   })
+  if (!html) dom.setAttribute('style', 'background: #cecece; color: white;')
+  html = html || 'Cannot find any replys in current page.'
   dom.innerHTML = html
 }
 
-// 
+//
 let setReplyBoxDom = (dom, users) => {
   // Create a box.
   let div = document.createElement('div')
