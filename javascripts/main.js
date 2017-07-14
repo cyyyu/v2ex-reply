@@ -3,21 +3,19 @@
   */
 
 // Use print as console.log
-let print = console.log.bind(console)
+const print = console.log.bind(console)
 
 // The html
 const replyBoxHtmlTemplate = () => `<p>{{replace}}</p>`
 
 // All replys in current page.
-let allDoms = () => document.querySelectorAll('.reply_content')
+const allDoms = query => document.querySelectorAll(query)
 
 // Does a reply @someone ?
-let isMetioningSomeOne = (content) => {
-  return content.indexOf("@") > -1
-}
+const isMetioningSomeOne = (content) => content.indexOf("@") > -1
 
 // Map util.
-let map = (target, fn) => {
+const map = (target, fn) => {
   if (Array.isArray(target)) {
     return Array.prototype.map.call(target, fn)
   } else {
@@ -32,7 +30,7 @@ let map = (target, fn) => {
 }
 
 // Get text of a dom.
-let getText = (e) => {
+const getText = (e) => {
   let t = ""
   e = e.childNodes || e
   for (let j = 0; j < e.length; j++) {
@@ -44,7 +42,7 @@ let getText = (e) => {
 }
 
 // Get all metioned users in a reply.
-let getMetioned = (content) => {
+const getMetioned = (content) => {
   let o = content.match(/\@[^\s]*/g) || []
   return map(o, (val) => {
     return val.replace(/\@/, '')
@@ -52,7 +50,7 @@ let getMetioned = (content) => {
 }
 
 // Insert html
-let setBoxHtml = (dom, users, level) => {
+const setBoxHtml = (dom, users, level) => {
   let li = replyBoxHtmlTemplate(),
     html = ''
   map(users, (user) => {
@@ -67,7 +65,7 @@ let setBoxHtml = (dom, users, level) => {
 }
 
 //
-let setReplyBoxDom = (dom, users) => {
+const setReplyBoxDom = (dom, users) => {
   // Create a box.
   let div = document.createElement('div')
   div.innerHTML = replyBoxHtmlTemplate
@@ -89,7 +87,7 @@ let setReplyBoxDom = (dom, users) => {
 }
 
 //
-let checkDom = (dom) => {
+const checkDom = (dom) => {
   let content = getText(dom)
   if (content && isMetioningSomeOne(content)) {
     dom.style.position = 'relative'
@@ -98,7 +96,7 @@ let checkDom = (dom) => {
 }
 
 // Get replys of specified user.
-let getUserContents = (user, level) => {
+const getUserContents = (user, level) => {
   let re = []
   for (let i = 0, l = allContents.length - 1; i < l; i++) {
     if (allContents[i].user === user && i < level) {
@@ -109,7 +107,7 @@ let getUserContents = (user, level) => {
 }
 
 // ============================================
-let allContents = map(allDoms(), (dom) => {
+const allContents = map(allDoms(), (dom) => {
   if (!dom || !dom.previousElementSibling) return {}
   let user = ''
   try {
@@ -124,4 +122,4 @@ let allContents = map(allDoms(), (dom) => {
   }
 })
 
-map(allDoms(), checkDom)
+map(allDoms('.reply_content'), checkDom)
