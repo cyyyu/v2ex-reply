@@ -1,0 +1,24 @@
+{
+  "name": "v2ex-reply",
+  "version": "1.0.0",
+  "description": "chrome extension for v2ex.com",
+  "scripts": {
+    "dist": "webpack -p",
+    "watch": "webpack --optimize-minimize -w -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyyyu/v2ex-reply.git"
+  },
+  "author": "cyyyu (ChuangYu)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cyyyu/v2ex-reply/issues"
+  },
+  "homepage": "https://github.com/cyyyu/v2ex-reply#readme",
+  "devDependencies": {
+    "ts-loader": "^2.3.1",
+    "typescript": "^2.4.2",
+    "webpack": "^3.3.0"
+  }
+}
