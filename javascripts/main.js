@@ -107,7 +107,7 @@ const getUserContents = (user, level) => {
 }
 
 // ============================================
-const allContents = map(allDoms(), (dom) => {
+const allContents = map(allDoms('.reply_content'), (dom) => {
   if (!dom || !dom.previousElementSibling) return {}
   let user = ''
   try {
