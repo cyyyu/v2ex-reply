@@ -21,7 +21,7 @@
       "stylesheets/main.css"
     ],
     "js": [
-      "javascripts/main.js"
+      "javascripts/index.js"
     ]
   }]
 }
