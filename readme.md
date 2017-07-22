@@ -1,6 +1,6 @@
 # v2ex-reply
 
-在楼层中显示回复者的内容。
+Screenshot:
 
 ![截图](./images/capture.png)
 
@@ -8,4 +8,4 @@
 
 `git clone https://github.com/cyyyu/v2ex-reply.git`
 
-在chrome插件页面中加载该插件即可。
+Manually load it into chrome.([a helpful blog here](https://www.cnet.com/how-to/how-to-install-chrome-extensions-manually/))
