@@ -1,15 +1,16 @@
 import getAllReplyContents from './getAllReplyContents'
+import map from './helpers/map'
 
 const allContents = getAllReplyContents()
 
 // Get replys of specified user.
 const getUserContents = (user: string, level: number): Array<string> => {
-  let re = []
-  for (let i = 0, l = allContents.length - 1; i < l; i++) {
-    if (allContents[i].user === user && i < level) {
-      re.push(allContents[i].content)
+  const re = []
+  map(allContents, (content) => {
+    if (content.user === user && content.level < level) {
+      re.push(content.content)
     }
-  }
+  })
   return re
 }
 
