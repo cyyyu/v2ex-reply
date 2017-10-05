@@ -6,20 +6,19 @@ import getAllReplys from './getAllReplys'
 interface replyContent {
   user: string
   content: string
+  level: number
 }
 
 const getAllReplyContents = (): Array<replyContent> => map(getAllReplys(), (dom) => {
   if (!dom || !dom.previousElementSibling) return {}
-  let user = ''
-  try {
-    user = dom.parentElement.querySelector('strong a').text
-  } catch (err) {
-    print(err, dom)
-    user = ''
-  }
+
+  const user = dom.parentElement.querySelector('strong a').text
+  const level = parseInt(dom.parentElement.querySelector('.fr .no').textContent)
+
   return {
-    user: user,
-    content: getText(dom)
+    user,
+    content: getText(dom),
+    level
   }
 })
 
