@@ -5,10 +5,10 @@ import map from './helpers/map'
 import getUserContent from './getUserContent'
 
 const setHtml = (dom: HTMLElement, users: Array<string>, level?: number) => {
-  let li = template(),
-    html = ''
+  const li = template()
+  let html = ''
   map(users, (user) => {
-    let contents = getUserContent(user, level)
+    const contents = getUserContent(user, level)
     map(contents, (content) => {
       html += li.replace(/\{\{replace\}\}/g, `${user}: ${content}`)
     })
