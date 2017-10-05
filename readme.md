@@ -1,10 +1,12 @@
 # v2ex-reply
 
-Screenshot:
+Show replys for better browsing.
+
+### Screenshot
 
 ![截图](./images/capture.png)
 
-## Usage
+### Usage
 
 `git clone https://github.com/cyyyu/v2ex-reply.git`
 
