@@ -7,13 +7,7 @@ const setReplyBoxDom = (dom: HTMLElement, users: Array<string>) => {
   let div = document.createElement('div')
   div.setAttribute('class', 'reply_box')
 
-  let level = 0
-  try {
-    level = parseInt(dom.parentElement.querySelector('.fr .no').textContent)
-  } catch (err) {
-    print(err)
-    level = 0
-  }
+  const level = parseInt(dom.parentElement.querySelector('.fr .no').textContent)
 
   // Insert contents.
   setHtml(div, users, level)
