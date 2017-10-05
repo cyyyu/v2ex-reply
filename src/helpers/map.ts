@@ -8,8 +8,10 @@ export default function map(target: targetType, fn: (val: any, key: number | str
     let re = [],
       val
     for (let key in target) {
-      val = target[key]
-      re.push(fn(val, key))
+      if (target.hasOwnProperty(key)) {
+        val = target[key]
+        re.push(fn(val, key))
+      }
     }
     return re
   }
