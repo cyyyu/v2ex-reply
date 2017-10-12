@@ -1,4 +1,3 @@
-import print from './helpers/print'
 import setHtml from './setHtml'
 
 //
