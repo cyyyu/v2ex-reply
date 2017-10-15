@@ -6,9 +6,10 @@
   width: 100%;
   height: auto;
   background-color: #f0f8ff;
-  padding: 3px 8px;
+  padding: 10px 15px;
   border-radius: 4px;
   box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .reply_content .reply_box p {
@@ -17,5 +18,5 @@
 }
 
 .reply_content .reply_box p:not(:last-child) {
-  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  margin-bottom: 6px;
 }
