@@ -1,7 +1,7 @@
-import getAllReplyContents from './getAllReplyContents'
+import getAllReplyDetails from './getAllReplyDetails'
 import map from './helpers/map'
 
-const allContents = getAllReplyContents()
+const allContents = getAllReplyDetails()
 
 // Get replys of specified user.
 const getUserContents = (user: string, level: number): Array<string> => {

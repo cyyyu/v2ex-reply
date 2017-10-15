@@ -9,7 +9,7 @@ interface replyContent {
   avatar: string
 }
 
-const getAllReplyContents = (): Array<replyContent> => map(getAllReplys(), (dom) => {
+const getAllReplyDetails = (): Array<replyContent> => map(getAllReplys(), (dom) => {
   if (!dom || !dom.previousElementSibling) return {}
 
   const user = dom.parentElement.querySelector('strong a').text
@@ -24,4 +24,4 @@ const getAllReplyContents = (): Array<replyContent> => map(getAllReplys(), (dom)
   }
 })
 
-export default getAllReplyContents
+export default getAllReplyDetails
