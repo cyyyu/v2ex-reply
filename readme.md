@@ -4,7 +4,7 @@ Show replys for better browsing.
 
 ### Screenshot
 
-![截图](./images/capture2.png)
+![截图](./images/screenshot.png)
 
 ### Usage
 
