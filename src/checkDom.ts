@@ -3,7 +3,7 @@ import isReplying from './helpers/isReplying'
 import setReplyBox from './setReplyBox'
 import getMetioned from './getMetioned'
 
-export default function checkDom(dom: HTMLElement) {
+export default function checkDom(dom) {
   let content = getText(dom)
   if (content && isReplying(content)) {
     dom.style.position = 'relative'
