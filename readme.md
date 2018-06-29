@@ -1,6 +1,6 @@
 # v2ex-reply
 
-> A chrome plugin for v2ex.com
+> A chrome extension for v2ex.com
 
 Show replys for better browsing.
 
